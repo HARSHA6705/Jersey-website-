@@ -1,0 +1,624 @@
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:6739
+- Network:       http://192.168.29.158:6739
+✓ Ready in 784ms
+✓ Running next.config.ts took 60ms
+
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+[browser] ./components/glass-hero.tsx:354:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  352 |     </section>
+  353 |   );
+> 354 | }
+      | ^
+  355 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/glass-hero.tsx
+    ./app/page.tsx 
+ GET / 200 in 1038ms (next.js: 524ms, application-code: 514ms)
+ GET / 200 in 1066ms (next.js: 612ms, application-code: 454ms)
+ GET / 200 in 349ms (next.js: 26ms, application-code: 323ms)
+ GET / 200 in 430ms (next.js: 76ms, application-code: 355ms)
+ GET / 200 in 314ms (next.js: 69ms, application-code: 245ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+ GET / 200 in 72ms (next.js: 12ms, application-code: 60ms)
+ GET / 200 in 58ms (next.js: 10ms, application-code: 48ms)
+ GET / 200 in 47ms (next.js: 7ms, application-code: 40ms)
+ GET / 200 in 495ms (next.js: 239ms, application-code: 256ms)
+✓ Compiled in 467ms
+ GET / 200 in 743ms (next.js: 382ms, application-code: 361ms)
+ GET / 200 in 345ms (next.js: 27ms, application-code: 318ms)
+ GET / 200 in 397ms (next.js: 66ms, application-code: 331ms)
+✓ Compiled in 261ms
+ GET / 200 in 333ms (next.js: 68ms, application-code: 265ms)
+ GET / 200 in 382ms (next.js: 13ms, application-code: 369ms)
+ GET / 200 in 379ms (next.js: 72ms, application-code: 307ms)
+ GET / 200 in 246ms (next.js: 27ms, application-code: 219ms)
+ GET / 200 in 187ms (next.js: 23ms, application-code: 164ms)
+✓ Compiled in 438ms
+ GET / 200 in 814ms (next.js: 19ms, application-code: 796ms)
+ GET / 200 in 454ms (next.js: 82ms, application-code: 371ms)
+ GET / 200 in 446ms (next.js: 69ms, application-code: 377ms)
+✓ Compiled in 228ms
+ GET / 200 in 761ms (next.js: 169ms, application-code: 592ms)
+ GET / 200 in 148ms (next.js: 24ms, application-code: 124ms)
+ GET / 200 in 231ms (next.js: 28ms, application-code: 203ms)
+ GET / 200 in 241ms (next.js: 80ms, application-code: 161ms)
+✓ Compiled in 1879ms
+ GET / 200 in 198ms (next.js: 79ms, application-code: 118ms)
+ GET / 200 in 148ms (next.js: 17ms, application-code: 131ms)
+ GET / 200 in 89ms (next.js: 24ms, application-code: 65ms)
+✓ Compiled in 427ms
+✓ Compiled in 199ms
+ GET / 200 in 408ms (next.js: 39ms, application-code: 369ms)
+ GET / 200 in 395ms (next.js: 35ms, application-code: 359ms)
+ GET / 200 in 100ms (next.js: 24ms, application-code: 75ms)
+✓ Compiled in 171ms
+ GET / 200 in 197ms (next.js: 26ms, application-code: 172ms)
+ GET / 200 in 223ms (next.js: 18ms, application-code: 205ms)
+ GET / 200 in 114ms (next.js: 36ms, application-code: 77ms)
+✓ Compiled in 112ms
+✓ Compiled in 243ms
+✓ Compiled in 161ms
+ GET / 200 in 261ms (next.js: 55ms, application-code: 206ms)
+ GET / 200 in 147ms (next.js: 25ms, application-code: 122ms)
+ GET / 200 in 70ms (next.js: 22ms, application-code: 48ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+ GET / 200 in 464ms (next.js: 15ms, application-code: 449ms)
+ GET / 200 in 84ms (next.js: 22ms, application-code: 62ms)
+ GET / 200 in 87ms (next.js: 16ms, application-code: 71ms)
+ GET / 200 in 358ms (next.js: 201ms, application-code: 157ms)
+ GET / 200 in 268ms (next.js: 17ms, application-code: 250ms)
+ GET / 200 in 209ms (next.js: 50ms, application-code: 159ms)
+ GET / 200 in 551ms (next.js: 192ms, application-code: 359ms)
+ GET / 200 in 1065ms (next.js: 687ms, application-code: 378ms)
+ GET / 200 in 531ms (next.js: 76ms, application-code: 455ms)
+ GET / 200 in 183ms (next.js: 44ms, application-code: 139ms)
+ GET / 200 in 359ms (next.js: 55ms, application-code: 304ms)
+✓ Compiled in 1002ms
+[browser] ⨯ unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1u36_0o._.css
+    at new Promise (<anonymous>)
+ GET / 200 in 247ms (next.js: 48ms, application-code: 199ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+ GET / 200 in 790ms (next.js: 17ms, application-code: 773ms)
+ GET / 200 in 172ms (next.js: 33ms, application-code: 139ms)
+ GET / 200 in 307ms (next.js: 63ms, application-code: 243ms)
+ GET / 200 in 263ms (next.js: 37ms, application-code: 226ms)
+ GET / 200 in 1680ms (next.js: 141ms, application-code: 1539ms)
+ GET / 200 in 1483ms (next.js: 31ms, application-code: 1452ms)
+ GET / 200 in 655ms (next.js: 166ms, application-code: 488ms)
+ GET / 200 in 995ms (next.js: 88ms, application-code: 908ms)
+ GET / 200 in 493ms (next.js: 236ms, application-code: 257ms)
+ GET / 200 in 421ms (next.js: 27ms, application-code: 394ms)
+ GET / 200 in 489ms (next.js: 207ms, application-code: 282ms)
+ GET / 200 in 300ms (next.js: 219ms, application-code: 81ms)
+ GET / 200 in 533ms (next.js: 12ms, application-code: 521ms)
+ GET / 200 in 555ms (next.js: 369ms, application-code: 186ms)
+ GET / 200 in 197ms (next.js: 49ms, application-code: 148ms)
+ GET / 200 in 721ms (next.js: 244ms, application-code: 477ms)
+ GET / 200 in 298ms (next.js: 179ms, application-code: 119ms)
+ GET / 200 in 139ms (next.js: 27ms, application-code: 113ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+ GET / 200 in 659ms (next.js: 199ms, application-code: 460ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="inter_7b06...">
+                          <body
+                            className="h-full bg-[#0e1f16] text-[#e7efee] font-sans selection:bg-[#e7efee] selection:t..."
+-                           data-atm-ext-installed="1.30.02"
+                          >
+                  ...
+ 
+ GET / 200 in 3.5s (next.js: 852ms, application-code: 2.7s)
+ GET / 200 in 1952ms (next.js: 367ms, application-code: 1585ms)
+ GET / 200 in 1272ms (next.js: 235ms, application-code: 1036ms)
+ GET / 200 in 507ms (next.js: 98ms, application-code: 409ms)
+ GET / 200 in 512ms (next.js: 40ms, application-code: 472ms)

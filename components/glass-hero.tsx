@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
+import { CartPill, NAV_LINKS } from "@/components/site-header";
 
 const DESKTOP_RADIUS = 235;
 const MOBILE_RADIUS = 150;
@@ -150,8 +152,8 @@ export default function GlassHero() {
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUpOrCancel}
       onPointerCancel={handlePointerUpOrCancel}
-      className="relative isolate overflow-hidden h-[100dvh] min-h-0 min-w-[320px] touch-none select-none bg-[#0e1f16] text-[#e7efee] max-md:h-auto max-md:min-h-[100dvh] max-md:touch-pan-y"
-      aria-label="GRIDLINE JERSEYS pro-fit matchday kit hero"
+      className="relative isolate overflow-hidden h-[100dvh] min-h-0 min-w-[320px] touch-none select-none bg-[#0e1f16] text-[#e7efee] max-md:h-auto max-md:min-h-[100dvh] max-md:min-w-0 max-md:touch-pan-y"
+      aria-label="BLAZE PRO pro-fit matchday kit hero"
     >
       {/* 1. Base Portrait Layer */}
       <div className="hero-bg-base z-0" aria-hidden="true" />
@@ -185,9 +187,9 @@ export default function GlassHero() {
           aria-label="Main Navigation"
         >
           {/* Brand Monogram & Name */}
-          <a
-            href="#"
-            className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e7efee] rounded-md p-1 min-h-[44px]"
+          <Link
+            href="/"
+            className="flex items-center gap-3 max-md:gap-2 group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e7efee] rounded-md p-1 min-h-[44px]"
           >
             <span className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-white/80 flex items-center justify-center shadow-xs group-hover:bg-white transition-colors">
               <svg
@@ -207,89 +209,88 @@ export default function GlassHero() {
                 <path d="M8.5 12.5h7" />
               </svg>
             </span>
-            <span className="font-mono text-xs md:text-sm uppercase tracking-widest font-semibold text-[#e7efee] max-md:text-[11px] max-md:whitespace-nowrap">
-              GRIDLINE JERSEYS
+            <span className="font-mono text-xs md:text-sm uppercase tracking-widest font-semibold text-[#e7efee] max-md:text-[10px] max-md:whitespace-nowrap">
+              BLAZE PRO
             </span>
-          </a>
+          </Link>
 
-          {/* Desktop Nav Links */}
-          <ul className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-[#e7efee]/75">
-            <li>
-              <a
-                href="#shop"
-                className="hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5"
-              >
-                Shop
-              </a>
-            </li>
-            <li>
-              <a
-                href="#custom"
-                className="hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5"
-              >
-                Custom
-              </a>
-            </li>
-            <li>
-              <a
-                href="#teams"
-                className="hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5"
-              >
-                Teams
-              </a>
-            </li>
-            <li>
-              <a
-                href="#support"
-                className="hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5"
-              >
-                Support
-              </a>
-            </li>
+          {/* Desktop Nav Links — grouped beside the brand (auto right margin) so they stay
+              clear of the player artwork on the right half */}
+          <ul className="hidden md:flex md:ml-10 md:mr-auto lg:ml-14 items-center gap-6 lg:gap-8 font-mono text-xs uppercase tracking-widest text-[#e7efee]/75">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
 
-          {/* CTA Link / Button */}
-          <a
-            href="#cart"
-            className="bg-white text-[#0a0f18] font-mono text-xs uppercase tracking-wider px-5 py-2.5 rounded-full border border-white/80 shadow-xs hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] min-h-[44px] inline-flex items-center justify-center font-medium max-md:px-4 max-md:text-[10px] max-md:whitespace-nowrap"
+          {/* Mobile-only Collections link — sits between brand and cart. Hidden on md+ where the full nav shows */}
+          <Link
+            href="/shop"
+            className="md:hidden shrink font-mono text-[9px] uppercase tracking-widest text-[#e7efee]/75 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e7efee] rounded px-1 py-0.5 whitespace-nowrap"
           >
-            Cart (0)
-          </a>
+            Collections
+          </Link>
+
+          {/* CTA Link / Button */}
+          <CartPill />
         </nav>
       </header>
 
       {/* 5. Editorial Content Overlay Layer */}
       {/* Desktop: absolute overlay (unchanged). Mobile: clean vertical flow below the header, scrollable */}
       <div className="absolute inset-0 z-40 pointer-events-none max-md:relative max-md:flex max-md:flex-col max-md:min-h-[100dvh] max-md:px-4 max-md:pt-[max(6.5rem,calc(env(safe-area-inset-top)+5.5rem))] max-md:pb-[max(4.5rem,calc(env(safe-area-inset-bottom)+4rem))]">
-        {/* Top meta row — brand / product lines, dot-separated */}
-        <div className="absolute top-[24%] md:top-[13%] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] right-[max(1.25rem,env(safe-area-inset-right))] md:right-[max(5.6vw,2rem)] flex items-start justify-between gap-6 animate-season-up max-md:static max-md:flex-col max-md:gap-2">
+        {/* Top meta row — brand / product lines, dot-separated (hidden on mobile portrait) */}
+        <div className="hero-meta absolute top-[24%] md:top-[13%] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] right-[max(1.25rem,env(safe-area-inset-right))] md:right-[max(5.6vw,2rem)] flex items-start justify-between gap-6 animate-season-up max-md:static max-md:flex-col max-md:gap-2">
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-[#e7efee]/70">
-            Gridline Jerseys · Oslo · Est. 2024
+            Blaze Pro · Oslo · Est. 2024
           </p>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-[#e7efee]/70 md:text-right">
             Pro-Fit · Matchday Jersey
           </p>
         </div>
 
-        {/* Main Headline */}
+        {/* Main Headline — BUILT/FOR/MATCHDAY on tablet (md–lg); NEYMAR/JR on mobile + laptop (lg+) */}
         <div className="absolute top-[30%] md:top-[26%] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] max-w-[62%] md:max-w-none min-w-[280px] max-md:static max-md:mt-2 max-md:max-w-none max-md:pb-7">
-          <h1 className="font-sans font-light tracking-[-0.085em] text-[#e7efee] text-[clamp(2.7rem,12.5vw,3.8rem)] leading-[0.87] md:text-[clamp(5.4rem,6.2vw,6.8rem)] md:leading-[0.93] max-md:text-[13.5vw] max-md:tracking-[-0.06em] max-md:whitespace-nowrap">
-            <span className="flex items-start gap-3 animate-line-1">
+          <h1 className="hero-title font-light tracking-[-0.085em] text-[#e7efee] text-[clamp(2.7rem,12.5vw,3.8rem)] leading-[0.87] md:text-[clamp(5.4rem,6.2vw,6.8rem)] md:leading-[0.93] max-md:text-[13.5vw] max-md:tracking-[-0.06em] max-md:whitespace-nowrap">
+            {/* Tablet headline — unchanged (md through lg) */}
+            <span className="hidden lg:hidden md:flex items-start gap-3 animate-line-1">
               <span>BUILT</span>
               <span className="mt-[0.35em] shrink-0 border border-[#e7efee]/35 px-1.5 py-0.5 font-mono text-[9px] tracking-widest text-[#e7efee]/80 md:text-[11px]">
                 25/26
               </span>
             </span>
-            <span className="block animate-line-2">FOR</span>
-            <span className="block animate-line-3">MATCHDAY</span>
+            <span className="hidden lg:hidden md:block animate-line-2">FOR</span>
+            <span className="hidden lg:hidden md:block animate-line-3">MATCHDAY</span>
+
+            {/* Mobile + laptop headline — NEYMAR / JR in the AZONIX-style face */}
+            <span className="block max-lg:md:hidden animate-line-1">NEYMAR</span>
+            <span className="block max-lg:md:hidden animate-line-2">JR</span>
           </h1>
         </div>
 
-        {/* Body copy — sentence case, under the headline */}
-        <div className="absolute top-[58%] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] max-w-[85vw] md:max-w-md animate-tagline-up max-md:static max-md:mt-6 max-md:max-w-none">
+        {/* Mobile portrait: invisible flow spacer — pushes the product information
+            into normal document flow BELOW the Neymar artwork band (its fade edge),
+            so nothing overlaps the player. */}
+        <div aria-hidden="true" className="spacer-m hidden max-md:block max-md:h-[calc(66dvh-13.5rem)]" />
+
+        {/* Body copy — laptop (lg+): Neymar intro sentence. Tablet + phone landscape:
+            original jersey sentence. Mobile portrait: removed via .mobile-desc rule. */}
+        <div className="mobile-desc absolute top-[58%] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] max-w-[85vw] md:max-w-md animate-tagline-up">
           <p className="font-sans text-sm md:text-base text-[#e7efee]/85 leading-relaxed">
-            Breathable, sublimated pro-fit jerseys — home &amp; away colorways
-            in every size, with your name and number pressed on.
+            <span className="hidden lg:inline">
+              Neymar Jr is a Brazilian football icon whose game is defined by
+              skill, creativity, movement, and individual expression.
+            </span>
+            <span className="lg:hidden">
+              Breathable, sublimated pro-fit jerseys — home &amp; away colorways
+              in every size, with your name and number pressed on.
+            </span>
           </p>
         </div>
 
@@ -301,15 +302,15 @@ export default function GlassHero() {
           </p>
         </div>
 
-        {/* Bottom spec strip + order link */}
-        <div className="absolute bottom-[max(2rem,env(safe-area-inset-bottom))] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] right-[max(1.25rem,env(safe-area-inset-right))] md:right-[max(5.6vw,2rem)] animate-copy-up max-md:static max-md:mt-auto max-md:pt-8">
-          <div className="md:flex md:items-end md:justify-between md:gap-10">
-            <dl className="grid grid-cols-2 gap-x-6 gap-y-5 md:grid-flow-col md:auto-cols-max md:gap-x-8">
+        {/* Bottom spec strip + order link — mobile portrait: normal flow below the player + description */}
+        <div className="absolute bottom-[max(2rem,env(safe-area-inset-bottom))] left-[max(1.25rem,env(safe-area-inset-left))] md:left-[max(5.6vw,2rem)] right-[max(1.25rem,env(safe-area-inset-right))] md:right-[max(5.6vw,2rem)] animate-copy-up max-md:static max-md:mt-6 max-md:-mx-4 max-md:px-4 max-md:pb-6 max-md:bg-gradient-to-t max-md:from-[#0e1f16] max-md:via-[#0e1f16]/95 max-md:to-transparent">
+          <div className="hero-strip-inner md:flex md:items-end md:justify-between md:gap-10">
+            <dl className="hero-specs grid grid-cols-2 gap-x-6 gap-y-5 md:grid-flow-col md:auto-cols-max md:gap-x-8 max-md:grid-cols-1 max-md:gap-y-5">
               {[
                 { label: "Fabric", value: "Pro-Fit Aero Mesh" },
                 { label: "Print", value: "Name & Number" },
                 { label: "Colorways", value: "Home & Away" },
-                { label: "Price", value: "€79" },
+                { label: "Price", value: "₹2,499" },
               ].map((spec) => (
                 <div
                   key={spec.label}
@@ -325,12 +326,13 @@ export default function GlassHero() {
               ))}
             </dl>
 
-            <a
-              href="#shop"
-              className="pointer-events-auto mt-6 inline-block border-b border-[#e7efee]/40 pb-1 font-mono text-[10px] uppercase tracking-widest text-[#e7efee] transition-colors hover:border-[#e7efee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e7efee] md:mt-0 md:shrink-0 md:text-xs"
+            <Link
+              href="/shop"
+              className="hero-cta pointer-events-auto max-md:mt-7 inline-block border-b border-[#e7efee]/40 pb-1 font-mono text-[10px] uppercase tracking-widest text-[#e7efee] transition-colors hover:border-[#e7efee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e7efee] md:mt-0 md:shrink-0 md:text-xs"
             >
-              Shop Jerseys · Ships in 5 Days
-            </a>
+              <span className="cta-m-label">Explore NJR Jerseys →</span>
+              <span className="cta-d-label">Shop Jerseys · Ships in 5 Days</span>
+            </Link>
           </div>
         </div>
       </div>

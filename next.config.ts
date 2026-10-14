@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Hide the dev-only "N" indicator badge (bottom-left circle) in development.
+  devIndicators: false,
 };
 
 export default nextConfig;

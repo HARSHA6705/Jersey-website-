@@ -3,9 +3,14 @@
 @theme {
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-fragment-mono), monospace;
+  --font-display: var(--font-azonix), var(--font-inter), system-ui, sans-serif;
   --color-paper: #0e1f16;
   --color-ink: #e7efee;
 }
+
+/* NEYMAR JR headline face — AZONIX-style (Syncopate 700).
+   Applied ONLY where the NEYMAR JR headline renders (mobile portrait + lg+);
+   tablet (768–1023px) keeps the original Inter face on BUILT/FOR/MATCHDAY. */
 
 :root {
   --paper-bg: #0e1f16;
@@ -17,10 +22,8 @@
 
 html,
 body {
-  height: 100%;
-  /* Desktop: no scrolling — single fixed-viewport hero */
-  overflow: hidden;
-  overscroll-behavior: none;
+  min-height: 100%;
+  overflow-x: clip;
   background-color: var(--paper-bg);
   color: var(--ink-color);
   margin: 0;
@@ -28,15 +31,32 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Home hero only: desktop is a single fixed viewport with no scrolling.
+   Store pages (shop, cart, …) scroll normally. */
+html:has([data-hero-lock]),
+html:has([data-hero-lock]) body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 /* Mobile-only: allow vertical scroll so the full hero is visible; still never horizontal */
 @media (max-width: 767px) {
-  html,
-  body {
+  html:has([data-hero-lock]),
+  html:has([data-hero-lock]) body {
     overflow-x: hidden;
     overflow-y: auto;
     width: 100%;
     max-width: 100%;
   }
+}
+
+/* Store pages: faint technical grid behind product art, echoing the hero */
+.store-grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(231 239 238 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(231 239 238 / 0.06) 1px, transparent 1px);
+  background-size: 12.5% 12.5%;
 }
 
 /* Background image pairs */
@@ -92,6 +112,35 @@ body {
   }
   .hero-bg-reveal {
     background-image: url('/images/Reveal_image_desktop.png');
+  }
+}
+
+/* Mobile PORTRAIT only: give the portrait artwork its own band at the top so the
+   product specifications sit in a clean area below Neymar instead of on top of him.
+   Phone landscape keeps the original full-bleed artwork (rule above / inset:0). */
+@media (max-width: 767px) and (orientation: portrait) {
+  .hero-bg-base,
+  .hero-bg-reveal {
+    bottom: auto;
+    height: 66dvh;
+    background-position: center top;
+  }
+
+  /* Soft fade at the bottom of the artwork so the image band meets the
+     description + spec area cleanly */
+  .hero-bg-base {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 72%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 72%,
+      transparent 100%
+    );
   }
 }
 
@@ -194,5 +243,96 @@ body {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* Outside mobile portrait (desktop / tablet / phone landscape): desktop CTA label */
+.cta-m-label {
+  display: none;
+}
+.cta-d-label {
+  display: inline;
+}
+
+/* Mobile PORTRAIT only (phones <768px held upright): premium minimal composition.
+   Phone LANDSCAPE keeps the desktop-style overlay — none of these rules apply there.
+   Must stay AFTER the .cta-*-label defaults above so portrait wins on source order. */
+@media (max-width: 767px) and (orientation: portrait) {
+  /* 1. No breathable description on mobile — block removed from flow entirely
+        (desktop/tablet/landscape keep the paragraph) */
+  .mobile-desc {
+    display: none;
+  }
+
+  /* 4. No metadata lines on mobile (BLAZE PRO · OSLO · EST. 2024 / PRO-FIT · MATCHDAY JERSEY) */
+  .hero-meta {
+    display: none;
+  }
+
+  /* NEYMAR JR in the wide AZONIX-style face: narrow the size/tracking slightly
+     so it keeps the same visual width as before on phones */
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: 12.5vw;
+    letter-spacing: -0.08em;
+  }
+
+  /* 2. Product information order: FABRIC → COLORWAYS → PRINT → PRICE */
+  .hero-specs > div:nth-child(1) { order: 1; } /* Fabric    */
+  .hero-specs > div:nth-child(2) { order: 3; } /* Print     */
+  .hero-specs > div:nth-child(3) { order: 2; } /* Colorways */
+  .hero-specs > div:nth-child(4) { order: 4; } /* Price     */
+
+  /* 3. Bottom CTA: lower-right, no underline, single NJR label */
+  .hero-strip-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-specs {
+    align-self: stretch;
+  }
+  .hero-cta {
+    margin-left: auto;
+    border-bottom: none;
+  }
+  .cta-d-label {
+    display: none;
+  }
+  .cta-m-label {
+    display: inline;
+  }
+}
+
+/* Laptop / desktop (lg+): NEYMAR JR headline + new description are live here.
+   The mobile flow spacer must not reserve space — the overlay is absolutely
+   positioned again, so collapse it to zero. */
+@media (min-width: 1024px) {
+  .spacer-m {
+    height: 0 !important;
+  }
+
+  /* Keep all hero text on the left half so nothing overlaps the player:
+     both meta lines sit side by side on the left, and the shop link moves
+     from the bottom-right corner to just above the spec row. */
+  .hero-meta {
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+  .hero-strip-inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.75rem;
+  }
+
+  /* Wide AZONIX-style face at laptop sizes: keep the composed width of the old
+     Inter headline (clamp 5.4–6.8rem) — Syncopate runs ~40% wider, so shrink
+     the em size and relax the tracking */
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.6rem, 4.4vw, 4.9rem);
+    letter-spacing: -0.01em;
+    line-height: 1.02;
   }
 }
