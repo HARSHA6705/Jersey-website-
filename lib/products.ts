@@ -65,8 +65,8 @@ export const NAME_MAX = 12;
 
 export type ProductPhotos = { front: string; back: string };
 
-// Jerseys with real photos — transparent cut-out PNGs in /public/images/products named
-// <slug>-front.png and <slug>-back.png. Add a slug here once both files are in place.
+// Jerseys with real photos — transparent cut-out WebPs in /public/images/products named
+// <slug>-front.webp and <slug>-back.webp. Add a slug here once both files are in place.
 const PHOTO_SLUGS = [
   "santos-njr",
   "barcelona-njr",
@@ -90,7 +90,7 @@ const PHOTO_SLUGS = [
 const PHOTOS: Record<string, ProductPhotos> = Object.fromEntries(
   PHOTO_SLUGS.map((slug) => [
     slug,
-    { front: `/images/products/${slug}-front.png`, back: `/images/products/${slug}-back.png` },
+    { front: `/images/products/${slug}-front.webp`, back: `/images/products/${slug}-back.webp` },
   ])
 );
 

@@ -59,25 +59,29 @@ html:has([data-hero-lock]) body {
   background-size: 12.5% 12.5%;
 }
 
-/* Background image pairs */
+/* Hero image layers. The pictures are real <img> elements (components/hero-art.tsx)
+   so the browser discovers the LCP image immediately and next/image can serve
+   AVIF/WebP at the right size per device. */
 .hero-bg-base {
   position: absolute;
   inset: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/images/Base_image_desktop.png');
-  will-change: transform, opacity;
+  will-change: transform;
   animation: heroImageEntrance 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-bg-base img,
+.hero-bg-reveal img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-bg-reveal {
   position: absolute;
   inset: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/images/Reveal_image_desktop.png');
   pointer-events: none;
   -webkit-mask-image: radial-gradient(
     circle var(--reveal-radius, 0px) at var(--reveal-x, -999px) var(--reveal-y, -999px),
@@ -97,24 +101,6 @@ html:has([data-hero-lock]) body {
   );
 }
 
-@media (max-width: 767px) {
-  .hero-bg-base {
-    background-image: url('/images/Base_image_mobile.png');
-  }
-  .hero-bg-reveal {
-    background-image: url('/images/Reveal_image_mobile.png');
-  }
-}
-
-@media (max-width: 767px) and (orientation: landscape) {
-  .hero-bg-base {
-    background-image: url('/images/Base_image_desktop.png');
-  }
-  .hero-bg-reveal {
-    background-image: url('/images/Reveal_image_desktop.png');
-  }
-}
-
 /* Mobile PORTRAIT only: give the portrait artwork its own band at the top so the
    product specifications sit in a clean area below Neymar instead of on top of him.
    Phone landscape keeps the original full-bleed artwork (rule above / inset:0). */
@@ -123,7 +109,10 @@ html:has([data-hero-lock]) body {
   .hero-bg-reveal {
     bottom: auto;
     height: 66dvh;
-    background-position: center top;
+  }
+  .hero-bg-base img,
+  .hero-bg-reveal img {
+    object-position: center top;
   }
 
   /* Soft fade at the bottom of the artwork so the image band meets the
@@ -144,14 +133,14 @@ html:has([data-hero-lock]) body {
   }
 }
 
-/* Keyframes for entrance animations */
+/* Keyframes for entrance animations.
+   The hero image only settles in scale — it is never hidden with opacity: 0,
+   so it counts as painted (LCP) the moment it arrives. */
 @keyframes heroImageEntrance {
   0% {
-    opacity: 0;
     transform: scale(1.035);
   }
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }

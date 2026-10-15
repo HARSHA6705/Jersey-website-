@@ -25,12 +25,13 @@ export default function ProductCard({ product }: { product: Product }) {
               sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, 50vw"
               className="object-contain p-[6%] transition-opacity duration-300 group-hover:opacity-0"
             />
+            {/* Hover-only back view: display:none on touch screens, so the lazy image is never fetched there */}
             <Image
               src={product.photos.back}
               alt=""
               fill
               sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, 50vw"
-              className="object-contain p-[6%] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className="hidden object-contain p-[6%] opacity-0 transition-opacity duration-300 group-hover:opacity-100 [@media(hover:hover)]:block"
             />
           </div>
         ) : (

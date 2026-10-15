@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
+import { HeroBase, HeroReveal } from "@/components/hero-art";
 import { CartPill, NAV_LINKS } from "@/components/site-header";
 
 const DESKTOP_RADIUS = 235;
@@ -155,11 +156,11 @@ export default function GlassHero() {
       className="relative isolate overflow-hidden h-[100dvh] min-h-0 min-w-[320px] touch-none select-none bg-[#0e1f16] text-[#e7efee] max-md:h-auto max-md:min-h-[100dvh] max-md:min-w-0 max-md:touch-pan-y"
       aria-label="BLAZE PRO pro-fit matchday kit hero"
     >
-      {/* 1. Base Portrait Layer */}
-      <div className="hero-bg-base z-0" aria-hidden="true" />
+      {/* 1. Base Portrait Layer (LCP image — real <img>, preloaded, high priority) */}
+      <HeroBase />
 
-      {/* 2. Reveal Portrait Layer (Liquid Glass Anatomical Version) */}
-      <div className="hero-bg-reveal z-10 pointer-events-none" aria-hidden="true" />
+      {/* 2. Reveal Portrait Layer (Liquid Glass Anatomical Version) — loads after the page */}
+      <HeroReveal />
 
       {/* 3. Technical Grid & Background Circle Layer */}
       <div
